@@ -1,0 +1,67 @@
+.valid-form {
+    /* This bit sets up the horizontal layout */
+    display:flex;
+    flex-direction:row;
+    
+    /* This bit draws the box around it */
+    border:1px solid grey;
+  
+    /* I've used padding so you can see the edges of the elements. */
+    padding:1px;
+    margin-bottom: 10px;
+  }
+  
+  .valid-input {
+    /* Tell the input to use all the available space */
+    flex-grow:2;
+    /* And hide the input's outline, so the form looks like the outline */
+    border:none;
+    height: 40px;
+    color: var(--otpcolorvar,black);
+    
+  }
+  
+  /* remove the input focus blue box, it will be in the wrong place. */
+  .valid-input:focus {
+    outline: none;
+  }
+  .valid-button {
+    /* Just a little styling to make it pretty */
+    border:1px solid white;
+    background:white;
+    color:red;
+   
+  }
+.valid-button:disabled{
+    color:#ddd
+
+  }
+ .error{
+    color: red;
+    font-size: 12px;
+    text-align: left;
+   
+  }
+  .again-send{
+text-decoration: none;
+color: red;
+cursor: pointer;
+  }
+  .again-send:hover{
+    color: green;
+  }
+  .counter-class{
+    font-size: 12px;
+    text-align: left;
+  }
+  .email-label{
+    font-size: 12px;
+    text-align: left;
+    
+  }
+  .form-button:disabled{
+    cursor: not-allowed;
+  }
+  .form-button:enabled{
+    background-color: green;
+  }

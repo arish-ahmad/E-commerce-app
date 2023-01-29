@@ -1,0 +1,70 @@
+img{
+    width: 150px;
+    height: 150px ;
+    margin: 10px;
+}
+.product-list-wrapper{
+    margin-top: 30px;
+}
+.search-header{
+    display: flex;
+}
+.search-header select{
+    height: 25px;
+    margin-right: 50px;
+    margin-top: 10px;
+    
+}
+.search-header h3{
+    margin-top: 10px;
+}
+
+.row-search-item{
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+.product-list-wrapper .row-search-item .col-sm-2{
+    margin-left: 20px;
+   
+}
+.product-list-wrapper .row-search-item .col-sm-8{
+    margin: 10px;
+    font-size: 15px;
+}
+
+.product-list-wrapper .row-search-item .col-sm-8 .p-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+.product-list-wrapper .row-search-item .col-sm-8 .p-price span{
+    margin-right:10px ;
+}
+.product-list-wrapper .row-search-item .col-sm-8 .p-price .p-price-value{
+    font-size: 25px;
+    
+}
+.product-list-wrapper .row-search-item .col-sm-8 .p-price .p-price-symbol{
+    top: -0.4em;
+    position: relative;
+    margin-right: 2px;
+}
+.product-list-wrapper .row-search-item .col-sm-8 .p-price .p-price-actualvalue{
+    text-decoration: line-through;
+    color: #565959;
+    font-size: 13px;
+}
+.product-list-wrapper .row-search-item .col-sm-8 .p-price .p-discount{
+    color: green;
+    font-size: 13px;
+}
+.col-sm-8 .color-button{
+    background-color: var(--procolor,black);
+    height: 18px;
+    border-radius: 46%;
+    border: 1px solid rgb(127, 127, 127);
+    
+}
+.color-button{
+    margin-right: 10px;
+}

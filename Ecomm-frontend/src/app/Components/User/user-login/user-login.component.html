@@ -1,0 +1,12 @@
+<div class="user-auth">
+    <div class="login">
+        <h1>User Login</h1>
+        <p  style="color: red;"></p>
+        <form  #loginform="ngForm" (ngSubmit)="userLogin(loginform.value)" class="form-wrapper">
+            <input ngModel class="form-input"  type="text"  name="username" placeholder="Username"/>
+            <input ngModel class="form-input" type="password" name="password" placeholder="Enter password"/>
+            <button class="form-button">Login</button>
+            <a class="shortcut" (click)="openUserSignup()">Don't have an account? Sign up</a>
+        </form>
+    </div>
+</div>

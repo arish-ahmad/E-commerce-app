@@ -1,0 +1,137 @@
+.nav{
+    display: flex;
+    justify-content: space-around;  
+}
+.nav .logo{
+    text-decoration: none;
+    
+    margin-left: 30px;
+    font-size: 35px;
+    color: white;
+    font-weight: bolder;
+}
+.menu-logo{
+    margin-top: 10px;
+   
+}
+
+.nav ul{
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+.nav li{
+    padding-left: 20px; ;
+    padding-top: 15px;
+    margin-right: 50px;
+}
+
+.nav li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.nav li a .userIcon{
+    margin-right: 10px;
+}
+.nav .nav-search form{
+    margin-top: 5px;
+    flex: 1 ;
+    display: flex !important;
+
+    margin-right: 5%;
+}
+.nav .nav-search form input{
+    flex:1;
+    color: black;
+    border: 1px solid black;
+    height: 35px;
+    width: 350px;
+    border-right: 0px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.nav .nav-search form button{
+   
+    color: black;
+    border: 1px solid black;
+    height: 35px;
+    border-left: 0px;
+}
+.logout{
+    cursor: pointer;
+    text-decoration: none;
+}
+.suggested-search{
+    position: absolute;
+    display: list-item !important;
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    top: 50px;
+    border: 1px solid #ddd;
+    font-size: 10px;
+    
+}
+.suggested-search li{
+
+    border:  1px solid #ddd;
+    padding: 10px;
+    margin: 0;
+
+}
+
+.suggested-search li a{
+    cursor: pointer;
+    color: black;
+}
+.cart-value{
+    top: -1em;
+    left: -0.8em;
+    position: relative;
+    /* margin-right: 2px; */
+    padding: 2px;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 12px;
+    color: white;
+}
+mat-sidenav-container{
+    background-color: #008ecc;
+
+}
+.hamburger{
+   font-size: 30px;
+   color: white;
+   margin-top: 10px;
+   
+}
+mat-sidenav{
+    background-color: #008ecc;
+   
+    max-width: 300px;
+    
+    
+}
+
+.drawer-user-icon,.drawer-user-label{
+ padding: 10px;
+ font-size: 20px;
+   color: white;
+   margin-top: 10px;
+}
+
+.drawer-cancel-icon{
+    padding: 10px;
+    font-size: 20px;
+      color: white;
+      margin-top: 10px;
+      margin-left: 20px;
+}
+
+.inner-container{
+padding: 5px;
+display: flex !important;
+}

@@ -1,0 +1,50 @@
+table{
+    text-align: left;
+    color: black;
+    margin: 10px;
+
+}
+h2{
+    color: black;
+    margin-top: 50px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+table td, table th{
+    border: 1px solid black ;
+    padding: 10px;
+   min-width: 100px;
+    max-width: 150px;
+
+   
+    
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+label{
+    margin: 10px;
+    padding: 5px;
+    color: black;
+    font-weight: bold;
+}
+select{
+    color: black;
+}
+.fa-pen-to-square{
+    margin: 10px;
+    
+}
+.fa-trash{
+    margin: 10px;
+}
+.fa-star{
+    margin: 10px;
+}
+input{
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+}

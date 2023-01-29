@@ -1,0 +1,47 @@
+<h2>Welcome Back {{displayUsername}}</h2>
+<label for="productCategory">Sort by Category: </label>
+<select name="productCategory" #productCategory (change)="onSelected()">
+    <option value="All">All</option>
+    <option value="Mobile">Mobile phones</option>
+    <option value="Laptops">Laptops</option>
+    <option value="Accessories">Accessories</option>
+    <option value="Headphone">Headphones</option>
+  </select>
+
+<table>
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th class="price">Actual Price</th>
+            <th>Discounted price</th>
+            <th>Description</th>
+            <th class="discount">Discount</th>
+            <th class="size">Size</th>
+            <th>Color</th>
+            <th>Action</th>
+           
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productList">
+            <td><img src="{{product.imgUrl}}" alt="Sorry! Image not available at this time"></td>
+            <td>{{product.productName}}</td>
+            <td>₹ {{numberWithCommas(product.actualPrice)}}</td>
+            <td>₹ {{numberWithCommas(((product.actualPrice - ((product.actualPrice * product.discount) /100))).toFixed(0))}}</td>
+            <td>{{product.description.slice(0,100)}}</td>
+            <td>{{product.discount}}%</td>
+            <td>{{product.size}}</td>
+            <td>{{product.color}}</td>
+            <td>
+                <fa-icon  class="fa-solid fa-trash fa-xl" (click)="deleteproduct(product.id)" [icon]="deleteicon"></fa-icon>
+                
+                <a style="text-decoration: none; color: black ;" routerLink="/seller-update-product/{{product.id}}"><fa-icon  class="fa-solid fa-pen-to-square fa-xl"  [icon]="updateicon"></fa-icon></a>
+                <fa-icon  class="fa-solid fa-star fa-xl" (click)="favorite(product.id)" [icon]="popularicon"></fa-icon>
+            </td>
+           
+        </tr>
+    </tbody>
+</table>

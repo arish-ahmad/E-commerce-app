@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    font-family: sans-serif;
+    margin: 10px;
+    
+}
+.container-header{
+    max-width: inherit;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   background-color: #008ecc;
+   color: white;
+   
+}
+.container-outlet{
+    margin: 10px;
+    margin-top: 20px;
+}
+.bg-dark{
+    max-width: inherit;
+   margin: 0;
+}
+.mat-typography{
+    margin: 0;
+}
+.my-5{
+    margin-bottom: 0 !important;
+}
+
+.form-wrapper{
+    
+    text-align: center;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 300px;
+}
+.form-input{
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: 1px solid black;
+    color: black;
+}
+.form-button{
+    height: 35px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.shortcut{
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    
+    background-color: black
+}
+.carousel-caption{
+    background-color: #00000099
+}

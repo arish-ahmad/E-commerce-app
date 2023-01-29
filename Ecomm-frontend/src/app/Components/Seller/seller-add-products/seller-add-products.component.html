@@ -1,0 +1,19 @@
+<div class="seller-auth">
+    <div class="signup">
+        <h1>Add Product Details Here</h1>
+        <form #selleraddpro="ngForm" (ngSubmit)="selleradd(selleraddpro.value)" class="form-wrapper">
+            <input required ngModel class="form-input"  type="text"  name="productName"  placeholder="Product Name"/>
+            <textarea ngModel class="form-input" type="text" name="description" placeholder="Description of a product"></textarea>
+            <input ngModel class="form-input" type="number" name="actualPrice" placeholder="Actual Price of Product (Incl of all taxes)"/>
+            <input ngModel class="form-input" type="text" name="size" placeholder="Size of Product"/>
+            
+            <input ngModel class="form-input" type="number" name="discount" placeholder="Discount" min="0" max="100">
+            
+            <input ngModel class="form-input" type="text" name="category" placeholder="Category"/>
+            <input ngModel class="form-input" type="text" name="color" placeholder="Color of Product"/>
+            <input ngModel class="form-input" type="text" name="imgUrl" placeholder="Url of product image"/>
+            <input ngModel class="form-input" type="hidden" name="sellerId" />
+            <button  class="form-button">Add Product</button>
+        </form>
+    </div>
+</div>

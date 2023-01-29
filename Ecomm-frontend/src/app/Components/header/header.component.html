@@ -1,0 +1,41 @@
+<nav class="nav">
+  <div class="menu-logo">
+    <fa-icon  class="hamburger" (click)="navBarToggle.toggle()" #ham [icon]="menuIcon" >Hamburger</fa-icon>
+    <a class="logo" routerLink="/">E-Comm</a>
+  </div>
+  
+
+  <div class="nav-search">
+    <form #search="ngForm" (ngSubmit)="searchQuery(search.value)">
+      <input autocomplete="off" ngModel name="searchval" type="text" placeholder="Search for products" (blur)="hideSearch()"
+        (keyup)="SearchProducts($event)" />
+      <button>Search</button>
+      </form>
+    <ul class="suggested-search" *ngIf="searchResult">
+      <li *ngFor="let item of searchResult.slice(0,5)" (click)="searchQuery(item.productName.toString())">
+        <a (mousedown)="redirectToProductPage(item.id)">{{item.productName}}</a>
+      </li>
+    </ul>
+
+  </div>
+  <div [ngSwitch]="menuType">
+    <ul *ngSwitchCase="'default'">
+      <li><a routerLink="user-login"><fa-icon class="userIcon" [icon]="userIcon"></fa-icon>Sign in / Sign up</a></li>
+      <li><a><fa-icon class="cartIcon" [icon]="cartIcon" ></fa-icon><span class="cart-value">5</span>Cart</a></li>
+    </ul>
+    <ul *ngSwitchCase="'seller-menu'">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="seller-add-products">Add products</a></li>
+
+      <li><a class="logout" (click)="logout()">Logout</a></li>
+    </ul>
+    <ul *ngSwitchCase="'seller-add-products'">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="seller-home">Seller Dashboard</a></li>
+      <li><a class="logout" (click)="logout()">Logout</a></li>
+    </ul>
+
+  </div>
+
+
+</nav>

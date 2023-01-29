@@ -1,0 +1,61 @@
+
+<mat-sidenav-container autosize >
+  
+    <mat-sidenav   role="navigation" #sidenavbar  fixedInViewport="true" mode="over"  > 
+      <div class="inner-container">
+        <div class="user-details">
+            <div>
+                <fa-icon class="drawer-user-icon" [icon]="userIcon"></fa-icon>
+                <label class="drawer-user-label">Hello, Sign in</label>
+            </div>
+          <fa-icon  class="drawer-cancel-icon" [icon]="cancelIcon" (click)="sidenavbar.toggle()"></fa-icon>
+        </div>
+        <div class="user-buttons">
+            <button class="account-button">Account</button>
+            <button class="orders-button">Orders</button>
+        </div>
+        <div class="options">
+            <label></label>
+            <a>Best Sellers</a>
+            <a>New Releases</a>
+            <a>Shop by Category</a>
+            <label></label>
+            <a>My Account</a>
+            <a>Whishlist</a>
+            <a>Need Help</a>
+            <a>About us</a>
+            <a>Contact us</a>
+        </div>
+        
+      </div>
+      
+    </mat-sidenav>
+    
+  
+    <div class="container-header">
+        <app-header [navBarToggle]="navBar(sidenavbar)"></app-header>   
+    </div>
+    <nav class="category-shortcut">
+        <ul>
+          <li>
+            <a>Mobile phones </a>
+          </li>
+          <li>
+            <a>Laptops </a>
+          </li>
+          <li>
+            <a>Appliances </a>
+          </li>
+        </ul>
+      </nav>
+    <div class="container-outlet">
+        
+        <router-outlet></router-outlet>
+    </div>
+    <div class="bg-dark">
+        <app-footer></app-footer>
+    </div>
+    
+  </mat-sidenav-container>
+  
+

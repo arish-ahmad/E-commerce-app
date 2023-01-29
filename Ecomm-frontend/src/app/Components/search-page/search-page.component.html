@@ -1,0 +1,25 @@
+<div class="product-list-wrapper">
+    <div class="search-header">
+        <select name="searchfilter">
+            <option value="All">Sort by: All</option>
+            <option value="Mobile">Sort by: Mobile phones</option>
+            <option value="Laptops">Sort by: Laptops</option>
+            <option value="Accessories">Sort by: Accessories</option>
+            <option value="Headphone">Sort by: Headphones</option>
+        </select>
+        <h3>{{searchResult?.length}} of over {{allproducts?.length}} results for <span style="color: #b15200;font-weight: bold;">"{{query}}"</span></h3>
+    </div>
+    <div class="row-search-item" *ngFor="let product of searchResult" (click)="viewProduct(product.id)">
+        <div class="col-sm-2">
+            <img src="{{product.imgUrl}}">
+        </div>
+        <div class="col-sm-8">
+            <p class="p-name">{{product.productName}}</p>
+            <p>{{product.description.slice(0,200)}}...</p>
+            <p class="p-price"><span class="p-price-symbol">₹</span><span class="p-price-value">{{numberWithCommas(((product.actualPrice - ((product.actualPrice * product.discount) /100))).toFixed(0))}}</span><span
+                    class="p-price-actualvalue">₹{{numberWithCommas(product.actualPrice.toString()) }}</span><span class="p-discount">({{product.discount}}% off)</span></p>
+                    <p>{{product.size}}</p>
+            <p><span><button *ngFor="let color of product.color.split(',')" class="color-button" style="--procolor:{{color}}"></button></span></p>
+        </div>
+    </div>
+</div>

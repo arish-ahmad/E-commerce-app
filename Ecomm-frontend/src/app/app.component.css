@@ -1,0 +1,92 @@
+.category-shortcut ul{
+    list-style-type: none;
+    display: flex;
+}
+ul li{
+    margin-left: 50px;
+}
+ul li a{
+    font-size: 15px;
+    
+}
+.category-shortcut {
+    background-color: #cecece;
+}
+mat-sidenav{
+    
+    max-width: 300px;   
+    
+}
+.user-details{
+    padding: 5px;
+    background-color: #008ecc;  
+    display: flex;
+    justify-content: space-between ;
+}
+
+.drawer-user-icon{
+ padding: 10px;
+ font-size: 25px;
+   color: white;
+   margin-top: 10px;
+}
+.drawer-user-label{
+    padding: 10px;
+ font-size: 15px;
+   color: white;
+   margin-top: 10px;
+}
+
+.drawer-cancel-icon{
+   
+    padding: 10px;
+    font-size: 20px;
+      color: white;
+      margin-top: 10px;
+      margin-left: 20px;
+}
+
+.inner-container{
+
+}
+.user-buttons{
+    padding: 5px;
+    background-color: #008ecc;  
+    display: flex;
+   
+}
+.user-buttons .account-button{
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    margin-left: 0;
+    color: white;
+    border: 1px solid white;
+    background-color: #008ecc;
+}
+.user-buttons .account-button:hover{
+   border: 2px solid white;
+   background-color: #008ecc;;
+   color: white;
+}
+.user-buttons .orders-button{
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    color: white;
+    border: 1px solid white;
+    background-color:#008ecc;
+}
+.user-buttons .orders-button:hover{
+    border: 2px solid white;
+    background-color: #008ecc;;
+    color: white;
+ }
+ .options{
+    display: grid;
+ }
+ .options a{
+margin: 10px;
+font-size: 15px;
+ }
+ 

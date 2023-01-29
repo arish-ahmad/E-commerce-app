@@ -1,0 +1,38 @@
+<div class="row-product-details" *ngIf="productDetails">
+    <div class="col-sm-4">
+        <img class="product-image" src="{{productDetails.imgUrl}}" >
+    </div>
+    <div class="col-sm-6">
+        <div class="details">
+            <h4><a routerLink="">Home</a> > <a (click)="redirectToCategory(productDetails.category)">{{productDetails.category}}</a>  > <a>{{productDetails.productName}}</a></h4>
+            <h1>{{productDetails.productName}}</h1>
+            <p class="p-price"><span class="p-price-symbol">₹</span><span class="p-price-value">{{numberWithCommas(((productDetails.actualPrice - ((productDetails.actualPrice*10) /100))).toFixed(0))}}</span><span
+                class="p-price-actualvalue">₹{{numberWithCommas(productDetails.actualPrice.toString()) }}</span><span class="p-discount">({{productDetails.discount}}% off)</span></p>
+            
+           
+            
+            <p>{{productDetails.description}}</p>
+            
+            <h2>Size <br><button *ngFor="let size of productDetails.size.split(',')" class="size-button">{{size}}</button></h2>
+            <h2>Color</h2>
+            <div class="product-color">
+                
+                
+                <ul>
+                    <li *ngFor="let color of productDetails.color.split(',')" >
+                        <button   (click)="selectColor(color)" class="color-button" style="--procolor:{{color}} ; --selectedColorvar:{{selectedColor}}"></button>
+                    </li>
+                </ul>
+                    
+            </div>
+            <!--<div class="quantity-group">
+                <button class="sub-quantity">-</button>
+                <input type="text" value="1">
+                <button class="add-quantity">+</button>
+            </div> -->
+            <button class="cart-button">Add to Cart</button>
+            <button class="buy-button">Buy Now</button>
+            
+        </div>
+    </div>
+</div>

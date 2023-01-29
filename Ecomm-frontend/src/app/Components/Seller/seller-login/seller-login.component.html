@@ -1,0 +1,12 @@
+<div class="seller-auth">
+    <div class="login">
+        <h1>Seller Login</h1>
+        <p  style="color: red;">{{invalidAuth}}</p>
+        <form  #loginform="ngForm" (ngSubmit)="sellerlogin(loginform.value)" class="form-wrapper">
+            <input ngModel class="form-input"  type="text"  name="username" placeholder="Username"/>
+            <input ngModel class="form-input" type="password" name="password" placeholder="Enter password"/>
+            <button class="form-button">Login</button>
+            <a class="shortcut" (click)="opensignup()">Don't have an account? Sign up</a>-
+        </form>
+    </div>
+</div>

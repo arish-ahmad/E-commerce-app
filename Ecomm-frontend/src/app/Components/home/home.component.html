@@ -1,0 +1,45 @@
+<ngb-carousel *ngIf="popularproducts">
+	<ng-template ngbSlide *ngFor="let product of popularproducts.slice(0,5)">
+		<div class="picsum-img-wrapper" (click)="view(product.id)">
+			<img src="{{product.imgUrl}}" alt="Random first slide" />
+		</div>
+		<div class="carousel-caption">
+			<h3>{{product.productName}}</h3>
+			<p>{{product.description}}</p>
+		</div>
+	</ng-template>
+</ngb-carousel>
+<div class="product-list-wrapper">
+	<h1>Trending Products</h1>
+	<div class="row">
+		<div class="col-sm-3" *ngFor="let product of allproducts">
+			<div class="product-item" (click)="view(product.id)">
+				<img src="{{product.imgUrl}}" alt="">
+				<div class="product-name">
+					<h6>{{product.productName}}</h6>
+				</div>
+				<div class="product-price">
+					
+					<span class="price-whole">Price:<span class="price-symbol">₹ </span>{{numberWithCommas(product.actualPrice)}} </span>
+				</div>
+				<div class="product-size">
+					
+					<h6 >Size: {{product.size}}</h6>
+				</div>
+				<div  class="product-color">
+					
+					<h6 >Color: <button *ngFor="let color of product.color.split(',')" class="color-button" style="--procolor:{{color}}"></button></h6>
+				</div>
+
+			
+				
+			</div>
+			<div class="product-footer">
+				<a >Add to Cart <fa-icon [icon]="cartIcon"></fa-icon></a>
+			</div>
+		</div>
+		
+
+	</div>
+
+</div>
